@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meal Cost Calculator</title>
+    </head>
+    <body>
+        <h2>Q1 2nd Grade Exercise submitted by Alpha Jimenez of 9- Rubidium</h2>
+
+        <p>
+            Meal Price: <input type="number" id="MealPrice">
+            Tip: <input type="number" id="Tip">
+            Service Charge (%): <input type="number" id="ServiceCharge">
+        </p>
+
+        <button onclick="totalMeal()">Accept Input</button>
+        
+        <p id="demo"></p>
+
+        <script>
+            function totalMeal() {
+                if (confirm("Do you want to calculate the total cost of your meal?")) {
+                    var mp = parseFloat(document.getElementById("MealPrice").value);
+                    var tip = parseFloat(document.getElementById("Tip").value);
+                    var sc = parseFloat(document.getElementById("ServiceCharge").value);
+
+                    // Check if the inputs are valid numbers
+                    if (isNaN(mp) || isNaN(tip) || isNaN(sc)) {
+                        document.getElementById("demo").innerHTML = "Please enter valid numbers in all fields.";
+                        return;
+                    }
+
+                    var serviceChargeAmount = (sc / 100) * mp;
+                    var totalCost = mp + tip + serviceChargeAmount;
+
+                    document.getElementById("demo").innerHTML = "The total cost of the meal is: $" + totalCost.toFixed(2);
+                } else {
+                    document.getElementById("demo").innerHTML = "Calculation cancelled.";
+                }
+            }
+        </script>
+    </body>
+</html>
