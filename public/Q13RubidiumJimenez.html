@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 3rd Graded Exercise submitted by Alpha Jimenez of 9 - Rubidium</h2>
+
+    <script> 
+        var dNumber = Math.floor(Math.random() * 100) + 1;
+
+
+        function checkIt(){
+            var userGuess = document.getElementById("guess").value;
+            userGuess = parseInt(userGuess);
+
+            var result = "";
+
+            if (isNaN(userGuess)) {
+                document.write("Please enter a valid number.")
+            }
+            else if (userGuess < dNumber) {
+                document.write("Higher.")
+            } else if (userGuess > dNumber) {
+                document.write("Lower.")
+            } else {
+                if (userGuess === dNumber) {
+                    document.write("You are correct!")
+                }
+            }
+            
+    
+
+            document.getElementById("output").innerHTML = result;
+        }
+    
+
+    </script>
+    <head>
+    <body></body>
+    </head>
+    <h2> Guess the number! <span id="hint"></span></h2>
+    <p> The number is from 1 to 100 </p>
+
+   <input type="number" id="guess">
+   <button onclick="checkIt()">Check it</button>
+
+    <p id = "output" ></p>
+    
+</body>
+</html>
