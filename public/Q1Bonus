@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess My Word!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6; 
+            color: #333; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2E8B57; /* Sea Green */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            width: 100px;
+            text-align: center;
+            margin: 10px;
+            border-radius: 5px;
+            border: 2px solid #007BFF;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #4CAF50; /* Green Button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #message {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #ff4500; /* Red-Orange color */
+            margin-top: 20px;
+        }
+
+        #wordDisplay {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guess My Word! >.<</h1>
+    <p id="wordDisplay"></p>
+    <input type="text" id="userInput" maxlength="1">
+    <button onclick="checkGuess()">Guess</button>
+    <p id="message"></p>
+
+    <script>
+        let secretWord = ["a", "w", "e", "s", "o", "m", "e"];
+        let guessedWord = ["-", "-", "-", "-", "-", "-", "-"];
+
+        document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+
+        function checkGuess() {
+            let guess = document.getElementById("userInput").value.toLowerCase(); // Get user input
+            let correct = false;
+
+            if (guess.length !== 1) {
+                document.getElementById("message").textContent = "Please enter a single letter.";
+                return;
+            }
+
+            for (let i = 0; i < secretWord.length; i++) {
+                if (secretWord[i] === guess) {
+                    guessedWord[i] = guess; // Replace dash with guessed letter
+                    correct = true;
+                }
+            }
+
+            document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+
+            document.getElementById("message").textContent = correct ? "✅ Correct!" : "❌ Try again.";
+            document.getElementById("userInput").value = ""; // Clear input field
+        }
+    </script>
+</body>
+</html>
