@@ -1,1 +1,36 @@
+## List and describe at least 5 topics that we discussed in class that you know very well. Each description should be at least 1 paragraph with two to five sentences.
 
+**1. Arithmetic Operations** - These are the most basic codes used in different coding languages - most commonly known in C++ and Javascript. It is usually used for performing operations on variables; for example, adding or subtracting using += and -=, respectively. Another use for it is for comparison; sometimes the variables are compared in a condition statement, like an if-else situation or a loop. 
+
+**2. Variable declaration** - This is the first step in all coding programs. In Javascript, we usually use *let* before the variable name in order to declare it. 
+
+**3. If-else statements** - Since this is seen in many coding languages (Python, C++, Javascript), it's easy to get used to. It is the most used and basic code in programs. Often, you get the answers you need immediately with this kind of code. This code allows you to see which choice is best. First, you declare your variables, then you compare it to all possible choices and the output of the code is the perfect choice/answer for that variable.
+
+**4. Input statements** - Input statements in Javascript are rather trickier. To make an input statement, just add *input type* for your declared variable and the ID name for that variable.
+
+**5. Output statements** - Output statements are easier than input. Use either *console.log* or *document.write*, though the former is commonly preferred in general. To connect the I/O statements, we can get the ID name from the declared variable and put it in the output statement using document.getElementById("id name"). 
+
+## List at least 5 topics that you know and can describe but needs further practice/discussion and why.  The why should be per topic listed.  
+
+**1. Do while loops** - Do while loops are just while loops except it runs the output first before checking the condition, which can be pretty confusing. This specific loop wasn't focused on during grade 7 or 8. 
+
+**2. Functions** - In general, these are easy to understand. However, C++ functions and Javascript functions are kind of different. Either way, I didn't understand functions thoroughly in grade 8. 
+
+**3. Nested loops** - These loops require so much it gets confusing when you try to do it yourself. If done incorrectly, the outputs may get mixed up. 
+
+**4. 
+
+## PLAN OF ACTION
+For me to understand the topics listed above more, the only thing I can do is try to **understand the overall idea**. In understanding the idea, I can type the code and be able to predict the output. Then, to gain further skill, I just need to continue practicing the code to detect the different logic and syntax errors. In doing this, I can further understand the idea of the code and what its purpose is. 
+
+## In the activities that were done in class, list at least two that you think were effective and at least two that you think not effective in helping you understand topics in our course and why?
+
+# Effective 
+1. **Graded exercises** - These short exercises gave a simple yet fun prompt to practice the code. Doing this, I was able to be aware of my mistakes and how the code goes.
+
+2. **Bonus exercises** - Much like the graded ones, this also provided fun prompts to practice coding on. They helped identify your errors, which helped me learn more about the prompt and the code needed. 
+
+# Ineffective 
+1. **Quizzes** - The quizzes only showed the format, but didn't help. They were questions about the code itself and the output, but it never had application.
+
+2. **Resource materials** - Like the quiz, it's only the format. To gain actual understanding of the code, I think it's best that there's application and not just the reading material where it pnly shows the basic format.
